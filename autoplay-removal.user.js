@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Video Autoplay removal
+// @name         Video Autoplay removal (aftonbladet.se, expressen.se)
 // @namespace    https://github.com/prositen
-// @version      0.3
+// @version      0.3.1
 // @description  Remove autoplay from videos
 // @author       prositen
 // @match        *://*.aftonbladet.se/*
