@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Aftonbladet autoplay removal
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Remove autoplay from videos
 // @author       prositen
 // @match        *://www.aftonbladet.se/*
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.1.1.min.js
+// @run-at document-end
 // ==/UserScript==
 
 (function() {
