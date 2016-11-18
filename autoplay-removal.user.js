@@ -1,13 +1,15 @@
 // ==UserScript==
-// @name         Aftonbladet autoplay removal
-// @namespace    http://tampermonkey.net/
-// @version      0.2
+// @name         Video Autoplay removal
+// @namespace    https://github.com/prositen
+// @version      0.3
 // @description  Remove autoplay from videos
 // @author       prositen
-// @match        *://www.aftonbladet.se/*
+// @match        *://*.aftonbladet.se/*
+// @match        *://*.expressen.se/*
+// @update       https://github.com/prositen/tampermonkey-scripts/raw/master/autoplay-removal.user.js
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.1.1.min.js
-// @run-at document-end
+// @run-at       document-end
 // ==/UserScript==
 
 (function() {
@@ -19,6 +21,9 @@
         if (new_src == src) {
             new_src += "&autoplay=false";
         }
+        new_src = new_src.replace('sticky=true','sticky=false');
         v.src = new_src;
+        jq(v).removeAttr('data-sticky');
     });
+    // Your code here...
 })();
