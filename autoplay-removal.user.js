@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Video Autoplay removal (aftonbladet.se, expressen.se)
 // @namespace    https://github.com/prositen
-// @version      0.4.0
+// @version      0.4.1
 // @description  Remove autoplay from videos
 // @author       prositen
 // @match        *://*.aftonbladet.se/*
@@ -15,7 +15,7 @@
 (function() {
     'use strict';
     var jq = jQuery.noConflict();
-    jq('iframe[allowfullscreen=true],iframe[src*=autoplay]').each(function(i,v) {
+    jq('iframe[allowfullscreen],iframe[src*=autoplay]').each(function(i,v) {
         var src = v.src;
         var new_src = src.replace('autoplay=true', 'autoplay=false');
         if (new_src == src) {
