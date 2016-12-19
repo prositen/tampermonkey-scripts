@@ -15,7 +15,7 @@
 (function() {
     'use strict';
     var jq = jQuery.noConflict();
-    jq('iframe[allowfullscreen=true]').each(function(i,v) {
+    jq('iframe[allowfullscreen=true],iframe[src*=autoplay]').each(function(i,v) {
         var src = v.src;
         var new_src = src.replace('autoplay=true', 'autoplay=false');
         if (new_src == src) {
