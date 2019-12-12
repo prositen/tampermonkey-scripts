@@ -2,7 +2,7 @@
 // @name         Remove twitter sidebar
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Remove unwanted stuff (promoted, other people's likes, ...)
+// @description  Remove sidebar
 // @author       Anna Holmgren
 // @match        *://*.twitter.com/*
 // @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
